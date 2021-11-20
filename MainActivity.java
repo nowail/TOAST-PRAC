@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         mbutton3= (Button) findViewById(R.id.button3);
         Button mbutton4 ;
         mbutton4= (Button) findViewById(R.id.button4);
+        Button mbutton5 ;
+        mbutton5= (Button) findViewById(R.id.button5);
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog1(v);
+            }
+        });
+        mbutton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newintent= new Intent(MainActivity.this,custom.class);
+
+                startActivity(newintent);
             }
         });
     }
@@ -153,4 +164,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
 
